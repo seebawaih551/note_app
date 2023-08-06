@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NoteItem extends StatelessWidget {
@@ -7,10 +6,10 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10, 5, 0, 16),
+      padding: const EdgeInsets.fromLTRB(10, 5, 0, 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Color.fromARGB(255, 246, 197, 106),
+        color: const Color.fromARGB(255, 246, 197, 106),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
