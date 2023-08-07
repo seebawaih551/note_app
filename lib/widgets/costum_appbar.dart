@@ -1,21 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'costum_search_icon.dart';
 
 class CostumAppBar extends StatelessWidget {
-  const CostumAppBar({super.key});
+  const CostumAppBar({super.key, required this.title, required this.icon});
+  final String title;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Text(
-          'Notes',
-          style: TextStyle(fontSize: 28),
+          title,
+          style: const TextStyle(fontSize: 28),
         ),
-        Spacer(),
-        CostumSearchIcon()
+        const Spacer(),
+        CostumSearchIcon(
+          icon: icon,
+        )
       ],
     );
   }
